@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_flutter_app/description_place.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+
+  String descrionDummy = 'Las Lajas es un barrio alejeado de la ciudad con una antigua arboleda ancestral perteneciente a una historica estancia, la cual fue refaccionada para establecer el club House, restaurant central de esos prados.';
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -23,11 +27,9 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Hola mundillo"),
+          title: Center(child: Text("Hola inmundo mundillo")),
         ),
-        body: Center(
-          child: Text("Hola inmundillo"),
-        ),
+        body: DescriptionPlace("Las Lajas", 3, descrionDummy)
       )
       // MyHomePage(title: 'Flutter Demo Home Page'),
     );
