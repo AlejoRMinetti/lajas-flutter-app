@@ -1,37 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_flutter_app/description_place.dart';
+import 'package:platzi_trips_flutter_app/gradient_back.dart';
+import 'package:platzi_trips_flutter_app/review_list.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
 
-  String descrionDummy = 'Las Lajas es un barrio alejeado de la ciudad con una antigua arboleda ancestral perteneciente a una historica estancia, la cual fue refaccionada para establecer el club House, restaurant central de esos prados.';
+  String descriptionDummy = 'Las Lajas es un barrio alejeado de la ciudad con una antigua arboleda ancestral perteneciente a una historica estancia, la cual fue refaccionada para establecer el Club House, siendo centro de reunion de sabios y profetas.';
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      home: Scaffold(
+        body: Stack(
+            children: <Widget>[
+              ListView(
+                  children: <Widget>[
+                    DescriptionPlace("Las Lajas", 3, descriptionDummy),
+                    ReviewList()
+                  ]
+              ),
+              GradientBack()
+            ]
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Center(child: Text("Hola inmundo mundillo")),
-        ),
-        body: DescriptionPlace("Las Lajas", 3, descrionDummy)
-      )
-      // MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }

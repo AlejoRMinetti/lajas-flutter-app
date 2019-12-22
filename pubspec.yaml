@@ -44,6 +44,7 @@ flutter:
   assets:
    - images/EzeViajero.png
    - images/BorraViajer.png
+   - images/YoEnHosteria.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

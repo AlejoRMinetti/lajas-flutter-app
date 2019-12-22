@@ -93,11 +93,10 @@ class DescriptionPlace extends StatelessWidget {
       )
       );
     
-    return ListView(
+    return Column(
       children: <Widget>[
         titleStarts,
-        description,
-        ReviewList()
+        description
       ],
     );
   }

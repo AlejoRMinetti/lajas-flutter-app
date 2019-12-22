@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_flutter_app/review.dart';
-
-
 
 class ReviewList extends StatelessWidget{
 
@@ -24,10 +21,10 @@ class ReviewList extends StatelessWidget{
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Review(pathImg1, name1, comment1, details1),
-        Review(pathImg2, name2, comment2, details2)
+        Review(pathImg2, name2, comment2, details2),
+        Review("images/YoEnHosteria.png", "CHAMA from Gral. Rodriguez",
+            "Firme en estas tierras preservando su esencia", "3 review 6 photos")
       ],
     );
   }
-
-
 }
