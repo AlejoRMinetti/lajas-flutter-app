@@ -8,5 +8,7 @@ import io.flutter.plugins.GeneratedPluginRegistrant
 class MainActivity: FlutterActivity() {
     override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
         GeneratedPluginRegistrant.registerWith(flutterEngine);
+        // TODO: hacer transparente status bar
+        //this.getWindow().setStatusBarColor(android.graphics.Color.TRANSPARENT)
     }
 }
