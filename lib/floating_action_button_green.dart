@@ -16,19 +16,23 @@ class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen>{
   IconData corazoncito = Icons.favorite_border;
 
   void onPressedFav(){
-    Scaffold.of(context).showSnackBar(
-        SnackBar(content: Text("Agregaste a favoritos"))
-    );
 
-    // TODO: cambiar icono favorito
-    if(corazonState){
-      corazoncito = Icons.favorite_border;
-      corazonState = false;
-    }else{
-      corazoncito = Icons.favorite_border;
-      corazonState = true;
-    }
+    setState(() {
 
+      if(corazonState){
+        corazoncito = Icons.favorite_border;
+        corazonState = false;
+        Scaffold.of(context).showSnackBar(
+            SnackBar(content: Text("Eliminado de favoritos"))
+        );
+      }else{
+        corazoncito = Icons.favorite;
+        corazonState = true;
+        Scaffold.of(context).showSnackBar(
+            SnackBar(content: Text("Agregaste a favoritos"))
+        );
+      }
+    });
   }
 
   @override
